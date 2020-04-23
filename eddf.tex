@@ -1,5 +1,6 @@
 \documentclass[10pt,landscape,a4paper]{article}
-% \usepackage{tgbonum}
+\usepackage{fontspec}
+\setmainfont{Segoe UI}
 \usepackage{multirow}
 \usepackage[utf8]{inputenc}
 \usepackage[landscape,top=0cm,bottom=1cm,right=1cm,left=0cm,noheadfoot,bindingoffset=0pt,marginparwidth=0pt,marginparsep=0pt]{geometry}
@@ -9,6 +10,7 @@
 \usepackage{textpos}
 \usepackage{array}
 \usepackage{xcolor}
+
 
 
 \title{EDDF NEW}
@@ -52,7 +54,11 @@ RFL                 &                                    & \multicolumn{1}{r|}{e
 \end{table}
 \end{textblock}
 
-\begin{textblock}{2}(110,0)
+\begin{textblock}{2}(210, 0)
+  \includegraphics[width=30\textwidth]{VATGer-Logo-Colour}
+\end{textblock}
+
+\begin{textblock}{2}(110,20)
 \begin{table}[]
 \begin{tabular}{|c|l|c|c|c|c|c|c|l}
 \multicolumn{8}{c}{\textbf{Standard South 18}}                                                                                                                                                                                                                  &                                  \\ \cline{1-8}
@@ -70,42 +76,42 @@ RFL                          &                  & \multicolumn{1}{r|}{even \text
 \end{table}
 \end{textblock}
 
-\begin{textblock}{10}(210,80)
+\begin{textblock}{10}(212,80)
 \footnotesize
 \begin{table}[]
 \begin{tabular}{|l|l|l|l|}
 
 \multicolumn{4}{c}{\textbf{Communication}}                                      \\ \hline
 \multirow{2}{*}{}    & \textbf{ADF} & \textbf{118.025} & \textbf{ATIS}            \\ %\cline{2-4}
-                     & FI           & 122.305          & Deicing                  \\ \hline
+                     & FI           & 122.300          & Deicing                  \\ \hline
 \multirow{4}{*}{\rotatebox{90}{TWR}} & \textbf{FT}  & \textbf{119.905} & \textbf{Tower}           \\% \cline{2-4}
-                     & WT           & 124.855          & West Tower               \\ %\cline{2-4}
-                     & NT           & 136.505          & North Tower              \\ %\cline{2-4}
+                     & WT           & 124.850          & West Tower               \\ %\cline{2-4}
+                     & NT           & 136.500          & North Tower              \\ %\cline{2-4}
                      & CT           & 118.775          & Centre Tower             \\ \hline
 \multirow{6}{*}{\rotatebox{90}{GND}} & \textbf{FAC} & \textbf{121.855} & \textbf{Centre Apron}    \\ %\cline{2-4}
-                     & FAE          & 121.955          & East Apron               \\ %\cline{2-4}
-                     & FAW          & 121.755          & West Apron               \\ %\cline{2-4}
-                     & FG           & 121.805          & Ground                   \\ %\cline{2-4}
-                     & FAS          & 121.655          & South Apron              \\ %\cline{2-4}
+                     & FAE          & 121.950          & East Apron               \\ %\cline{2-4}
+                     & FAW          & 121.750          & West Apron               \\ %\cline{2-4}
+                     & FG           & 121.800          & Ground                   \\ %\cline{2-4}
+                     & FAS          & 121.650          & South Apron              \\ %\cline{2-4}
                      & \textbf{FC}  & \textbf{121.905} & \textbf{Delivery}        \\ \hline
 \multirow{6}{*}{\rotatebox{90}{APP}} & \textbf{FN}  & \textbf{120.805} & \textbf{North Arrival}   \\ %\cline{2-4}
-                     & FS           & 125.355          & South Arrival            \\ %\cline{2-4}
+                     & FS           & 125.350          & South Arrival            \\ %\cline{2-4}
                      & \textbf{FF}  & \textbf{127.275} & \textbf{North Director}  \\ %\cline{2-4}
-                     & FU           & 118.505          & South Director           \\ %\cline{2-4}
+                     & FU           & 118.500          & South Director           \\ %\cline{2-4}
                      & \textbf{FD}  & \textbf{120.155} & \textbf{North Departure} \\ %\cline{2-4}
                      & FH           & 136.125          & South Departure          \\ \hline
 \multirow{7}{*}{\rotatebox{90}{CTR}} & GC           & 135.725          & Complete                 \\ %\cline{2-4}
                      & \textbf{GE}  & \textbf{127.725} & \textbf{HEF Hersfeld}    \\ %\cline{2-4}
                      & GR           & 124.475          & RUD Rüdesheim            \\ %\cline{2-4}
                      & GZ           & 120.575          & KTG Kitzingen            \\ %\cline{2-4}
-                     & UT           & 132.405          & Rhein TGO                \\ %\cline{2-4}
+                     & UT           & 132.400          & Rhein TGO                \\ %\cline{2-4}
                      & UN           & 132.775          & Rhein NTM                \\ %\cline{2-4}
                      & \textbf{UW}  & \textbf{133.655} & \textbf{Rhein West}      \\ \hline
 \end{tabular}
 \end{table}
 \end{textblock}
 
-\begin{textblock}{100}(110,50)
+\begin{textblock}{100}(0,80)
 \begin{table}[]
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \multicolumn{9}{c}{\textbf{Precision Approach}}                                                                                                                                                                            \\ \hline
@@ -120,7 +126,8 @@ FAF  & LEDKI                             & REDGO                             & E
 
 
 
-\begin{textblock}{100}(0,80)
+\begin{textblock}{100}(155,80)
+\footnotesize
 \begin{table}[]
 \begin{tabular}{|l|l|l|}
 \multicolumn{3}{c}{\textbf{Non-RNAV}} \\ \hline
@@ -130,7 +137,16 @@ FAF  & LEDKI                             & REDGO                             & E
 \end{table}
 \end{textblock}
 
-\begin{textblock}{100}(90,80)
+\begin{textblock}{100}(120, 0)
+  \large
+  \centering
+  EDDF Quicksheet
+
+  04/2020
+\end{textblock}
+
+\begin{textblock}{100}(123,108)
+\footnotesize
 \begin{table}[]
 \begin{tabular}{|l|l|l|l|l|}
 \multicolumn{5}{c}{\textbf{Handoff levels}}              \\ \hline
@@ -141,7 +157,8 @@ FAF  & LEDKI                             & REDGO                             & E
 \end{table}
 \end{textblock}
 
-\begin{textblock}{100}(0,105)
+\begin{textblock}{100}(0,108)
+\footnotesize
 \begin{table}[]
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 
@@ -155,6 +172,7 @@ FL110  & FL110  & 6000   & 6000   & 5000   & 5000   & 5000   & 5000   & 5000   \
 \end{textblock}
 
 \begin{textblock}{100}(0,130)
+\footnotesize
 \begin{table}[]
 \begin{tabular}{|l|l|l|ll|l|}
 
