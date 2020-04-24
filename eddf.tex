@@ -7,11 +7,17 @@
 \pagestyle{empty}
 \usepackage{float}
 \usepackage{graphicx}
-\usepackage{textpos}
+\usepackage[absolute]{textpos}
 \usepackage{array}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage{colortbl}
 
-
+\makeatletter
+\def\hlinewd#1{%
+  \noalign{\ifnum0=`}\fi\hrule \@height #1 \futurelet
+   \reserved@a\@xhline}
+\makeatother
 
 \title{EDDF NEW}
 \author{ }
@@ -23,30 +29,30 @@
 
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{\TPHorizModule}
-% \textblockorigin{0mm}{0mm}
+\textblockorigin{7mm}{7mm}
 
 
 \begin{textblock}{30}(0,0)
 
 \begin{table}[]
 \begin{tabular}{|c|l|c|c|c|l}
-
+\arrayrulecolor{gray}
 \multicolumn{5}{c}{\textbf{Standard North 07/25}}  \\ \cline{1-5}
 SID                 &                                    & \multicolumn{1}{l|}{OBOKA} & \multicolumn{1}{l|}{MARUN} & \multicolumn{1}{l|}{TOBAK} & \multirow{2}{*}{} \\
 
 
 RFL                 &                                    & \multicolumn{1}{r|}{even}  & \multicolumn{1}{r|}{even}  & \multicolumn{1}{r|}{odd}   &                                                  \\ \cline{1-5}
-\multirow{8}{*}{25} & M/L+3/4H+J if able                 & \textbf{1M \textcolor{red}{C}}                & \textbf{6M \textcolor{red}{C}}                & \textbf{6M \textcolor{red}{C}}                & \multirow{2}{*}{\rotatebox{90}{\textbf{FL70}}} \\ \cline{2-5}
-                    & M/L+3/4H+J if able                 & \textbf{1H \textcolor{red}{L}}                & \textbf{4H \textcolor{red}{L}}                & \textbf{4H \textcolor{red}{L}}                &                                                  \\ \cline{2-6}
+\multirow{8}{*}{\textbf{25}} & M/L+3/4H+J if able                 & \textbf{1M} \textcolor{blue}{C}                & \textbf{6M} \textcolor{blue}{C}                & \textbf{6M} \textcolor{blue}{C}                & \multirow{2}{*}{\rotatebox{90}{\textbf{FL70}}} \\ \cline{2-5}
+& M/L+3/4H+J if able                 & \textbf{1H} \textcolor{blue}{L}                & \textbf{4H} \textcolor{blue}{L}                & \textbf{4H} \textcolor{blue}{L}               &                                                  \\ \arrayrulecolor{red}\cline{2-6}\arrayrulecolor{gray}
                     & 2H if able                         & \textbf{1G}                & \textbf{7G}                & \textbf{8G}                & \multirow{8}{*}{\rotatebox{90}{\textbf{5000 ft}}}                                                 \\ \cline{2-5}
                     & M/L (ATC) if able                  &                            & 5F                         & 6F                         &                                                  \\ \cline{2-5}
                     & If unable                          & \textbf{1G}                & \textbf{7G}                & \textbf{8G}                &                                                  \\ \cline{2-5}
                     & Night departures                   & 2N                         & 7N                         & 9N                         &                                                  \\ \cline{2-5}
                     & M/L if able                        & 1E                         & 5E                         & 9D                         &                                                  \\ \cline{2-5}
-                    & H/J or unable                      & 1D                         & 9D                         & 9D                         &                                                  \\ \cline{1-5}
-\multirow{2}{*}{07} & M/L if able                        & \textbf{1E}                & \textbf{5E}                & \textbf{9D}                &                                                  \\ \cline{2-5}
-                    & H/S or unable                      & \textbf{1D}                & \textbf{9D}                & \textbf{9D}                &                                                  \\ \cline{1-6}
-\multirow{4}{*}{18} & \multirow{2}{*}{Only if 25 in use} & 2S                         & 6S                         & 8S                         & \multirow{4}{*}{\rotatebox{90}{\textbf{4000 ft}}}               \\ \cline{3-5}
+                    & H/J or unable                      & 1D                         & 9D                         & 9D                         &                                                  \\ \arrayrulecolor{red}\cline{1-5}\arrayrulecolor{gray}
+\multirow{2}{*}{\textbf{07}} & M/L if able                        & \textbf{1E}                & \textbf{5E}                & \textbf{9D}                &                                                  \\ \cline{2-5}
+                    & H/S or unable                      & \textbf{1D}                & \textbf{9D}                & \textbf{9D}                &                                                  \\ \arrayrulecolor{red}\cline{1-6}\arrayrulecolor{gray}
+\multirow{4}{*}{\textbf{18}} & \multirow{2}{*}{Only if 25 in use} & 2S                         & 6S                         & 8S                         & \multirow{4}{*}{\rotatebox{90}{\textbf{4000 ft}}}               \\ \cline{3-5}
                     &                                    &1L                         &                            &                            &                                                  \\ \cline{2-5}
                     & Night departures                   & 1R                         & 3R                         & 3R                         &                                                  \\ \cline{2-5}
                     & ATC contingency                    & 1T                         & 4T                         & 6T                         &                                                  \\ \cline{1-5}
@@ -61,22 +67,25 @@ RFL                 &                                    & \multicolumn{1}{r|}{e
 \begin{textblock}{2}(110,20)
 \begin{table}[]
 \begin{tabular}{|c|l|c|c|c|c|c|c|l}
+\arrayrulecolor{gray}
 \multicolumn{8}{c}{\textbf{Standard South 18}}                                                                                                                                                                                                                  &                                  \\ \cline{1-8}
 SID                          &                  & SOBRA                                       & ULKIG                                       & ANEKI                    & CINDY                    & KOMIB                              & SULUS                    &                                  \\
 RFL                          &                  & \multicolumn{1}{r|}{even \textgreater{}250} & \multicolumn{1}{r|}{even \textgreater{}250} & \multicolumn{1}{r|}{odd} & \multicolumn{1}{r|}{odd} & \multicolumn{1}{r|}{odd EDDN area} & \multicolumn{1}{r|}{odd} & \multirow{4}{*}{\rotatebox{90}{\textbf{5000 ft}}} \\ \cline{1-8}
 \multirow{3}{*}{\textbf{25}} & Prop 1/2         & 5P                                          &                                             &                          &                          &                                    &                          &                                  \\ \cline{2-8}
                              &                  & 6F                                          &                                             & 9F                       & 1F                       &                                    & 1F                       &                                  \\ \cline{2-8}
-                             & Night departures & 6N                                          &                                             &                          &                          &                                    &                          &                                  \\ \hline
+                             & Night departures & 6N                                          &                                             &                          &                          &                                    &                          &                                  \\  \arrayrulecolor{red}\hline\arrayrulecolor{gray}
 \multirow{2}{*}{\textbf{07}} & M/L if able      & 6E                                          &                                             & 4E                       & 1D                       & 3D                                 & \textbf{1D}              & \multirow{5}{*}{\rotatebox{90}{\textbf{4000 ft}}} \\ \cline{2-8}
-                             & H/J or unable    & 6D                                          &                                             & 2D                       & 1D                       & 3D                                 & \textbf{1D}              &                                  \\ \cline{1-8}
-\multirow{3}{*}{\textbf{18}} & If able          & \textbf{1L}                                 & \textbf{1L}                                 & \textbf{9L}              & \textbf{1S}              & \textbf{}                          & \textbf{9S}              &                                  \\ \cline{2-8}
+                             & H/J or unable    & 6D                                          &                                             & 2D                       & 1D                       & 3D                                 & \textbf{1D}              &                                  \\ \arrayrulecolor{red}\cline{1-8}\arrayrulecolor{gray}
+\multirow{3}{*}{\textbf{18}} & If able          & \textbf{1L}                                 & \textbf{1L}                                 & \textbf{9L}              & \textbf{1S}              & \textbf{}                          & \textbf{9S$^{\textcolor{purple}{1}}$}             &                                  \\ \cline{2-8}
                              & If unable        &                                             & 2S                                          &                          & 1L                       &                                    & 9L                       &                                  \\ \cline{2-8}
                              & L-Alternate RNAV &                                             &                                             & 2A                       & 1A                       &                                    & 2A                       &                                  \\ \cline{1-8}
+\multicolumn{8}{l}{\textcolor{purple}{1} If 07 in use, use 07 for SULUS departures} \\
 \end{tabular}
 \end{table}
+
 \end{textblock}
 
-\begin{textblock}{10}(212,80)
+\begin{textblock}{10}(202,80)
 \begin{table}[]
 \begin{tabular}{|l|l|l|l|}
 
@@ -125,7 +134,7 @@ FAF  & LEDKI                             & REDGO                             & E
 
 
 
-\begin{textblock}{100}(140,110)
+\begin{textblock}{100}(100,135)
 \begin{table}[]
 \begin{tabular}{|l|l|l|}
 \multicolumn{3}{c}{\textbf{Non-RNAV}} \\ \hline
